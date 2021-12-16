@@ -73,8 +73,7 @@ df_merged_clean_NY = df_merge1_clean[df_merge1_clean['provider_state']=='NY']
 df_merged_clean_NY
 Pivot_table_NY = df_merged_clean_NY.pivot(index="provider_name", columns= 'apc' ,values ='average_estimated_submitted_charges')
 Pivot_table_NY_sample = Pivot_table_NY.sample(10)
-pivot_table_sb = df_merged_clean_SB.pivot(index="provider_name", columns= 'apc' ,values ='average_estimated_submitted_charges')
-pivot_table_sb 
+pivot_table_sb = df_merged_clean_SB.pivot(index="provider_name", columns= 'apc' ,values ='average_estimated_submitted_charges') 
 st.subheader('NY Pivot Table')
 st.dataframe(Pivot_table_NY_sample)
 st.subheader('SB Pivot Table')
