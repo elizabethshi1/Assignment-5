@@ -41,23 +41,18 @@ df_merged2 = df_Inpatient.merge(df_Hospital, how= 'left', left_on='provider_id',
 
 len(df_merged1)
 
-df_merged1
 
-df_merged2
 
 df_merge1_clean = df_merged1[df_merged1['hospital_name'].notna()]
 
 df_merge2_clean = df_merged2[df_merged2['hospital_name'].notna()]
 
-df_merge1_clean
-
-df_merge2_clean
 
 df_merged_clean_SB = df_merge1_clean[df_merge1_clean['hospital_name']=='SUNY/STONY BROOK UNIVERSITY HOSPITAL']
-df_merged_clean_SB
+
 
 df_merged_clean_SB2 = df_merge2_clean[df_merge2_clean['hospital_name']=='SUNY/STONY BROOK UNIVERSITY HOSPITAL']
-df_merged_clean_SB2
+
 
 # Streamlit
 
