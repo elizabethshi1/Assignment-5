@@ -96,12 +96,18 @@ st.dataframe(pivot_table_sb2)
 
 #question 2
 st.title('Most Expensive Inpatient DRGs?')
-
+max_value= pivot_table_sb2.idxmax(axis = 1)
+maxvlue = pivot_table_sb2.max(axis = 1)
+st.text(max_value)
+st.text(maxvlue)
+st.text('The most expensive inpatient DRGs is ECMO OR TRACH W MV >96 HRS OR PDX EXC FACE, MOUTH & NECK W MAJ O.R.')
 #question 3
 st.title('Most Expensive Outpatient DRGs?')
-max_value= pivot_table_sb2.max()
+max_value= pivot_table_sb.idxmax(axis = 1)
+maxvlue = pivot_table_sb.max(axis = 1)
 st.text(max_value)
-
+st.text(maxvlue)
+st.text('The most expensive inpatient DRGs is Level IV Endoscopy Upper Airway')
 #question 4
 st.title("State count in Outpatient's and Hospital's Table")
 pie1 = pd.DataFrame(df_merge1_clean['provider_state'].value_counts().reset_index())
