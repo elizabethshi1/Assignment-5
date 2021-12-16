@@ -4,7 +4,7 @@ Created on Thu Dec 16 01:25:40 2021
 
 @author: Elizabeth Shi
 """
-conda install streamlit
+
 import streamlit as st
 import pandas as pd
 import numpy as np
