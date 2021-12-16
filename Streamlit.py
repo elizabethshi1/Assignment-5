@@ -66,7 +66,7 @@ st.dataframe(df_Inpatient)
 st.header('2015 Outpatient Table')
 st.dataframe(df_Outpatient)
 
-pie1 = df_merge1_clean['provider_state'].value_counts()
+pie1 = df_merge1_clean['provider_state'].value_counts().reset_index
 st.header("Pie Chart of Outpatient's and Hospital's States")
 fig = px.pie(pie1, values='provider_state', names='index')
 st.plotly_chart(fig)
