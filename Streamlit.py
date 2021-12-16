@@ -68,6 +68,7 @@ st.dataframe(df_Outpatient)
 
 st.header("Pie Chart of Outpatient's and Hospital's States")
 fig = px.pie(df_merge1_clean, values ="provider_state", names="index")
+st.plotly_chart(fig)
 
 # question 1
 st.title('How Does Stony Brook Compare To The Rest of NY')
