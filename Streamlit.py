@@ -125,3 +125,11 @@ bar1 = df_hospital_NY['hospital_type'].value_counts().reset_index()
 st.dataframe(bar1)
 st.header("Bar Chart of NY Hospital Type")
 st.bar_chart(bar1)
+
+#question 6
+st.title('Most common discharge in Inpatient Drg Group')
+common_discharges = df_merged_clean_NY2.groupby('drg_definition')['total_discharges'].sum().reset_index()
+top10 = common_discharges.head(10)
+col1 = st.beta_column(1)
+col1.header('Top 10 Drgs')
+col1.dataframe(top10)
