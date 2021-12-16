@@ -26,6 +26,7 @@ df_Inpatient =pd.read_csv('https://raw.githubusercontent.com/hantswilliams/AHI_D
 df_Hospital = pd.DataFrame.from_dict(df_Hospital)
 df = clean_names(df_Hospital)
 df = remove_empty(df_Hospital)
+df_Hospital = df_hospital.dropna()
 
 
 #SBU
