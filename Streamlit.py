@@ -48,7 +48,7 @@ df_merged2 = df_Inpatient.merge(df_Hospital, how= 'left', left_on='provider_id',
 len(df_merged1)
 
 
-
+#cleaning data
 df_merge1_clean = df_merged1[df_merged1['hospital_name'].notna()]
 
 df_merge2_clean = df_merged2[df_merged2['hospital_name'].notna()]
