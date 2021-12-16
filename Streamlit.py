@@ -99,6 +99,8 @@ st.title('Most Expensive Inpatient DRGs?')
 
 #question 3
 st.title('Most Expensive Outpatient DRGs?')
+max_value= pivot_table_sb2.max()
+st.text(max_value)
 
 #question 4
 st.title("State count in Outpatient's and Hospital's Table")
