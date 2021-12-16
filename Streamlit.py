@@ -10,6 +10,7 @@ Created on Thu Dec 16 01:25:40 2021
 import streamlit as st
 import pandas as pd
 import numpy as np
+!pip install plotly
 import plotly.express as px
 from plotly.subplots import make_subplots
 import plotly.graph_objects as go
@@ -67,8 +68,9 @@ st.header('2015 Outpatient Table')
 st.dataframe(df_Outpatient)
 
 pie1 = df_merge1_clean['provider_state'].value_counts().reset_index
+st.dataframe(pie1)
 st.header("Pie Chart of Outpatient's and Hospital's States")
-fig = px.pie(pie1, values='provider_state')
+fig = px.pie(pie1, values='provider_state',names='index')
 st.plotly_chart(fig)
 
 # question 1
