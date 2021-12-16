@@ -72,6 +72,12 @@ st.header("Pie Chart of Outpatient's and Hospital's States")
 fig = px.pie(pie1, values='provider_state',names='index')
 st.plotly_chart(fig)
 
+st.header("bar Chart of NY Hospital Type")
+df_hospital_NY= df_Hospital[df_Hospital['provider_state']=='NY']
+bar1 = df_hospital_NY['hospital_type'].value_counts().reset_index()
+st.dataframe(bar1)
+
+
 # question 1
 st.title('How Does Stony Brook Compare To The Rest of NY')
 st.header('Hospital and Outpatient')
