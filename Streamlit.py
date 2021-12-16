@@ -129,7 +129,7 @@ st.bar_chart(bar1)
 #question 6
 st.title('Most common discharge in Inpatient Drg Group')
 common_discharges = df_merged_clean_NY2.groupby('drg_definition')['total_discharges'].sum().reset_index()
-top10 = pd.DataFrame(common_discharges.head(10))
+top10 = pd.DataFrame(common_discharges.sort_values('total_discharges').head(10))
 st.dataframe(common_discharges)
 st.header('Top 10 DRGs Discharge')
 st.dataframe(top10)
