@@ -6,16 +6,15 @@ Created on Thu Dec 16 01:25:40 2021
 """
 
 
-!pip install streamlit
+
 import streamlit as st
 import pandas as pd
 import numpy as np
 
-
 import matplotlib.pyplot as plt
 import seaborn as snsx
 
-!pip install pyjanitor
+
 from janitor import clean_names, remove_empty
 
 import os
