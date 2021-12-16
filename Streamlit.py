@@ -19,12 +19,9 @@ df_Hospital = pd.read_csv('https://raw.githubusercontent.com/hantswilliams/AHI_D
 df_Outpatient = pd.read_csv('https://raw.githubusercontent.com/hantswilliams/AHI_DataSci_507/main/Deployment_Streamlit/outpatient_2015.csv')
 df_Inpatient =pd.read_csv('https://raw.githubusercontent.com/hantswilliams/AHI_DataSci_507/main/Deployment_Streamlit/inpatient_2015.csv')
 
-# Cleaning of Hospital Table
-df_Hospital = pd.DataFrame.from_dict(df_Hospital)
-df = clean_names(df_Hospital)
-df = remove_empty(df_Hospital)
 
-display(df_Hospital)
+
+
 
 #SBU
 
