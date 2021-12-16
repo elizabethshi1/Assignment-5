@@ -75,7 +75,7 @@ st.plotly_chart(fig)
 st.header("bar Chart of NY Hospital Type")
 df_hospital_NY= df_Hospital[df_Hospital['state']=='NY']
 bar1 = df_hospital_NY['hospital_type'].value_counts().reset_index()
-st.dataframe(bar1)
+st.bar_chart(bar1)
 
 
 # question 1
