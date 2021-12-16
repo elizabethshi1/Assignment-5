@@ -66,16 +66,9 @@ st.dataframe(df_Inpatient)
 st.header('2015 Outpatient Table')
 st.dataframe(df_Outpatient)
 
-pie1 = pd.DataFrame(df_merge1_clean['provider_state'].value_counts().reset_index())
-st.dataframe(pie1)
-st.header("Pie Chart of Outpatient's and Hospital's States")
-fig = px.pie(pie1, values='provider_state',names='index')
-st.plotly_chart(fig)
 
-st.header("bar Chart of NY Hospital Type")
-df_hospital_NY= df_Hospital[df_Hospital['state']=='NY']
-bar1 = df_hospital_NY['hospital_type'].value_counts().reset_index()
-st.bar_chart(bar1)
+
+
 
 
 # question 1
@@ -90,3 +83,37 @@ st.subheader('NY Pivot Table')
 st.dataframe(Pivot_table_NY_sample)
 st.subheader('SB Pivot Table')
 st.dataframe(pivot_table_sb)
+st.text("Stony Brook University's submitted charges are more on the pricer side of NY hospitals. However, there are other hospitals that have submitted charges that are higher than Stony Brook Hospital.")
+st.header('Hospital and Inpatient')
+df_merged_clean_NY2 = df_merge2_clean[df_merge2_clean['provider_state']=='NY']
+Pivot_table_NY2 = df_merged_clean_NY2.pivot(index="provider_name", columns= 'drg_definition' ,values ='average_total_payments')
+Pivot_table_NY2_sample = Pivot_table_NY2.sample(10)
+st.subheader('NY Pivot Table')
+st.dataframe(Pivot_table_NY2_sample)
+pivot_table_sb2 = df_merged_clean_SB2.pivot(index="provider_name", columns= 'drg_definition' ,values ='average_total_payments')
+st.subheader('SB Pivot Table')
+st.dataframe(pivot_table_sb2)
+
+#question 2
+st.title('Most Expensive Inpatient DRGs?')
+
+#question 3
+st.title('Most Expensive Outpatient DRGs?')
+
+#question 4
+st.title("State count in Outpatient's and Hospital's Table")
+pie1 = pd.DataFrame(df_merge1_clean['provider_state'].value_counts().reset_index())
+st.header('State Count Table')
+st.dataframe(pie1)
+st.header("Pie Chart of Outpatient's and Hospital's States")
+fig = px.pie(pie1, values='provider_state',names='index')
+st.plotly_chart(fig)
+
+#question 5
+st.title('How many Hospital Types are there in Hospital Table')
+st.header('Hospital Types')
+df_hospital_NY= df_Hospital[df_Hospital['state']=='NY']
+bar1 = df_hospital_NY['hospital_type'].value_counts().reset_index()
+st.dataframe(bar1)
+st.header("Bar Chart of NY Hospital Type")
+st.bar_chart(bar1)
