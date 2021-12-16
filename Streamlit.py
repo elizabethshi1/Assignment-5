@@ -4,19 +4,24 @@ Created on Thu Dec 16 01:25:40 2021
 
 @author: Elizabeth Shi
 """
+!conda install streamlit
 
 import streamlit as st
 import pandas as pd
 import numpy as np
-conda install sweetviz
+
+!conda install sweetviz
+
 import sweetviz
+
 import sweetviz as sv
-conda install pandas_profiling
+
+!conda install pandas_profiling
 
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-conda install pyjanitor
+!conda install pyjanitor
 from janitor import clean_names, remove_empty
 
 import os
