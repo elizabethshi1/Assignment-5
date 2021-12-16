@@ -10,7 +10,6 @@ Created on Thu Dec 16 01:25:40 2021
 import streamlit as st
 import pandas as pd
 import numpy as np
-!pip install plotly
 import plotly.express as px
 from plotly.subplots import make_subplots
 import plotly.graph_objects as go
