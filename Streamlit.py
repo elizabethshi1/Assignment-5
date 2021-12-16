@@ -66,6 +66,9 @@ st.dataframe(df_Inpatient)
 st.header('2015 Outpatient Table')
 st.dataframe(df_Outpatient)
 
+st.header("Pie Chart of Outpatient's and Hospital's States")
+fig = px.pie(df_merge1_clean, values ="provider_state", names="index")
+
 # question 1
 st.title('How Does Stony Brook Compare To The Rest of NY')
 st.header('Hospital and Outpatient')
