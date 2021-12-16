@@ -14,13 +14,18 @@ import plotly.express as px
 from plotly.subplots import make_subplots
 import plotly.graph_objects as go
 import time
+from janitor import clean_names, remove_empty
 
 df_Hospital = pd.read_csv('https://raw.githubusercontent.com/hantswilliams/AHI_DataSci_507/main/Deployment_Streamlit/hospital_info.csv')
 df_Outpatient = pd.read_csv('https://raw.githubusercontent.com/hantswilliams/AHI_DataSci_507/main/Deployment_Streamlit/outpatient_2015.csv')
 df_Inpatient =pd.read_csv('https://raw.githubusercontent.com/hantswilliams/AHI_DataSci_507/main/Deployment_Streamlit/inpatient_2015.csv')
 
 
+#cleaning data
 
+df_Hospital = pd.DataFrame.from_dict(df_Hospital)
+df = clean_names(df_Hospital)
+df = remove_empty(df_Hospital)
 
 
 #SBU
