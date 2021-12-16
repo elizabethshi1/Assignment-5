@@ -10,15 +10,10 @@ Created on Thu Dec 16 01:25:40 2021
 import streamlit as st
 import pandas as pd
 import numpy as np
-
-import matplotlib.pyplot as plt
-import seaborn as snsx
-
-
-from janitor import clean_names, remove_empty
-
-import os
-import glob
+import plotly.express as px
+from plotly.subplots import make_subplots
+import plotly.graph_objects as go
+import time
 
 
 # Cleaning of Hospital Table
